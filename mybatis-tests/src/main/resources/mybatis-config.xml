@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://www.mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    <properties>-->
+<!--        <property name="driverClass" value=""/>-->
+<!--    </properties>-->
+
+    <typeAliases>
+
+    </typeAliases>
+
+<!--<settings>-->
+<!--    <setting name="cache" value="false"/>-->
+<!--</settings>-->
+
+    <environments default="te_id">
+        <environment id="te_id">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql:///db_test?useSSL=false" />
+                <!--注意：这里必须是username,一定要规范-->
+                <property name="username" value="root" />
+                <property name="password" value="Harrytion" />
+            </dataSource>
+        </environment>
+    </environments>
+
+
+    <mappers>
+        <mapper resource="open/sc/TestMapper.xml"/>
+    </mappers>
+
+</configuration>
