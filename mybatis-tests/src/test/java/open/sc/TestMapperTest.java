@@ -1,5 +1,6 @@
 package open.sc;
 
+import net.bytebuddy.ByteBuddy;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -36,6 +37,11 @@ public class TestMapperTest {
         System.out.println(integers);
         Collections.sort(integers,(i1,i2)->i2-i1);
         System.out.println(integers);
+    }
+
+    @Test
+    public void testByte(){
+
     }
 }
 
