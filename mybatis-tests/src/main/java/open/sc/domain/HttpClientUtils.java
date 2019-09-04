@@ -26,7 +26,12 @@ import java.util.Map;
  * @author Jackrams
  *
  */
-public class HttpClientUtils {
+public final class HttpClientUtils {
+
+    private HttpClientUtils() throws Exception{
+        throw new Exception("哪个要实例化我，我就让哪个报错！！！");
+    }
+
     private static PoolingHttpClientConnectionManager cm;  
     private static String EMPTY_STR = "";  
     private static String UTF_8 = "UTF-8";  
